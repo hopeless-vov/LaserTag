@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <title>LazerGuns</title>
 </head>
 <style>
@@ -15,84 +17,95 @@ body {
   left: 0;
   margin: 0 auto;
   padding: 0;
-  font-family: 'Merriweather Sans', sans-serif;
+  background: #262626;
 }
-.grids {
+.mainContentText {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  background: url(./images/QhXoJnF.jpg) ; 
-  background-size: cover;
-  height: 100vh;
+  grid-gap: 25px;
 }
-.main-body {
-   
+.mainContent {
+  margin-top: 60px;
+}
+.mainContentText span:first-child {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 46px;
+  line-height: 56px;
   text-align: center;
-  margin-top: 200px;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
-.main-body h1 {
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 65px;
+.mainContentText span {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.5);
 }
-.main-body h3 {
-  font-size: 30px;
-  background-color: #ffffff;
-  background-image: linear-gradient(45deg, #60ff75, #136c0a, #002b12);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+.buttons {
+  display: grid;
+  justify-content: center;
+  grid-gap: 25px;
 }
-.main-body-links {
-margin-top: 20px;
-}
-.main-body .main-body-links a{
+.buttons a:first-child {
+  margin-top: 15px;
+  outline: none;
   text-decoration: none;
-  margin: 30px;
-  font-size: 20px;
-  color: #136c0a;
-  font-weight: bold;
-
+  border: none;
+  background: #383CFF;
+  box-shadow: 0px 4px 50px rgba(56, 60, 255, 0.2);
+  padding: 12px 37px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: capitalize;
+  color: #FFFFFF;
 }
-.main-body .main-body-image img {
-  width: 100%;
+.buttons a:first-child  {
+ display: grid;
+ grid-template-columns: 1fr auto;
+ grid-gap: 12px;
 }
-.main-body-image {
+.buttons a {
+  text-align: center;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  text-decoration: none;
+  outline: none;
+}
  
-margin-top: 10%;
-
+@media (max-width: 575px) {
+   .mainContent {
+     margin-top: 30px;
+   }
+   .buttons a:first-child {
+     margin-top: 0;
+   }
 }
-.main-body .main-body-links a:hover{
-  text-decoration-line: underline;
- }
-   @media only screen and (max-width: 850px) {  
-    .grids {
-      grid-template-columns: 1fr;
-    }
-    .main-body {
-      margin-top: 50px;
-    }
-    .main-body-image {
-      text-align: center;
-      justify-self: center;
-      width: 70%;
-    margin-top: 30px;
-
-}
-  } 
 </style>
 <body>
-    <div class="grids"> 
-        <div class="main-body">
-            <h1> BUY ALPHA</h1> <br>
-            <h3><em>GATHER YOUR FRIENDS AND START <br>PLAYING</em></h3>
-            <div class="main-body-links">
-              <a href="https://strikepros.com/#page-home">Learn more <b>&#10095;</b></a>
-              <a href="https://strikepros.com/#page8">Buy <b>&#10095;</b></a>
-            </div>
-           </div>
-        <div class="main-body-image">
-          <img width= "100%"  src="./images/alpha1_big.png" alt="">
-          </div>
+     <div class="mainContent">
+       <div class="mainContentText">
+         <span>buy alpha</span>
+         <span>Just relax and make your life brighter! Gather your<br> friends and start playing.</span>
+         <div class="buttons">
+          <a href="https://strikepros.com/#page-home"> <img src="./images/buy.svg" alt=""> Buy Now</a>
+          <a href="https://strikepros.com/#page8">Learn More</a>
+         </div>
+         
+         <img style="display: grid; justify-self: center; width: 50%;" src="./images/gun.png" alt="">
+       </div>
+     </div>
 </body>
 </html>
